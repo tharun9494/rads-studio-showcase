@@ -3,7 +3,7 @@ import { Portfolio } from "@/components/site/Portfolio";
 import { Reviews } from "@/components/site/Reviews";
 import { Contact } from "@/components/site/Contact";
 
-export const Route = createFileRoute("/portfolio")({
+export const Route = createFileRoute("/portfolio/")({
   head: () => ({
     meta: [
       { title: "Portfolio — Selected Projects · RADS" },
