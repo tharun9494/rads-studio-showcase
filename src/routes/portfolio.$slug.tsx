@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getAdjacent, getProject, projects } from "@/data/projects";
+import { getAdjacent, getProject, projects, type Project } from "@/data/projects";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { Contact } from "@/components/site/Contact";
 
@@ -113,9 +113,9 @@ function ProjectPage() {
       {/* Scope */}
       <section className="bg-ink py-24 md:py-32">
         <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-          <SectionLabel number="02" title="Scope of Work" tone="dark" />
+          <SectionLabel number="02" title="Scope of Work" tone="light" />
           <ul className="reveal mt-12 grid grid-cols-1 gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
-            {project.scope.map((s, i) => (
+            {project.scope.map((s: string, i: number) => (
               <li
                 key={s}
                 className="flex items-baseline gap-4 bg-ink px-6 py-8 md:px-8"
@@ -137,7 +137,7 @@ function ProjectPage() {
         <div className="mx-auto max-w-[1400px] px-6 md:px-12">
           <SectionLabel number="03" title="Gallery" />
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {project.gallery.map((g, i) => (
+            {project.gallery.map((g: Project["gallery"][number], i: number) => (
               <figure
                 key={i}
                 className={`reveal overflow-hidden ${i % 3 === 0 ? "md:col-span-2" : ""}`}
