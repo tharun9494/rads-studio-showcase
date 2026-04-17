@@ -16,6 +16,7 @@ export function Footer() {
         <nav className="flex flex-wrap items-center justify-center gap-6">
           {[
             { to: "/", label: "Home" },
+            { to: "/about", label: "About" },
             { to: "/services", label: "Services" },
             { to: "/portfolio", label: "Portfolio" },
             { to: "/contact", label: "Contact" },
